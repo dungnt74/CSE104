@@ -2,8 +2,7 @@ package Lab4;
 
 import java.util.Scanner;
 
-public class EIBANKRATE {
-
+class EIBANKRATE {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {

@@ -2,8 +2,7 @@ package Lab4;
 
 import java.util.Scanner;
 
-public class EIDINRATE {
-
+class EIDINRATE {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -14,14 +13,10 @@ public class EIDINRATE {
             double L = sc.nextDouble();
             double M = sc.nextDouble();
 
-            int year = 0;
-            while (N < M) {
-                N += N * L / 100d;
-                year++;
-            }
+            L /= 100d;
+            long answer = (long) Math.ceil((double) Math.log((double) M / N) / (Math.log(1.0 + L)));
 
-            System.out.println(year);
+            System.out.println(answer);
         }
     }
 }
-
