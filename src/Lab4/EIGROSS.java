@@ -11,12 +11,10 @@ public class EIGROSS {
 
         for (int i = 0; i < n; i++) {
             double m = sc.nextDouble();
-            long temp = Math.round(m + m / 10d);
 
-            while (temp - temp / 10d < m)
-                temp++;
+            double answer = m/9d;
 
-            System.out.println(temp / 10d);
+            System.out.printf("%.2f\n", answer);
         }
     }
 }
