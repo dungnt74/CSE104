@@ -15,9 +15,8 @@ class EIAPP21222FQ1 {
         m %= 12;
         double answer = n;
 
-        for (int i = 1; i <= year; i++) {
-            answer += answer*(interestRate[11]);
-        }
+        answer = answer*Math.pow(1 + interestRate[11], year);
+
         if (m !=0)
             answer += answer*(interestRate[m-1]*m/12);
 
