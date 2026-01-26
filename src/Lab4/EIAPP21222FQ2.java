@@ -19,9 +19,8 @@ class EIAPP21222FQ2 {
             months %= 12;
             double temp = n;
 
-            for (int j = 1; j <= year; j++) {
-                temp += temp * (interestRate[11]);
-            }
+            temp += temp * Math.pow(1+ interestRate[11], year);
+
             if (months != 0)
                 temp += temp * (interestRate[months - 1] * months / 12);
 
