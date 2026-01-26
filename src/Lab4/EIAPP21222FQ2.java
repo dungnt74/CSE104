@@ -9,8 +9,7 @@ class EIAPP21222FQ2 {
         int m = sc.nextInt();
         double answer = 0;
 
-        double[] interestRate = new double[] { 0.039, 0.0392, 0.0395, 0.0399, 0.0404, 0.0554, 0.0572, 0.0592, 0.0614,
-                0.0638, 0.0664, 0.0692 };
+        double[] interestRate = new double[]{0.039, 0.0392, 0.0395, 0.0399, 0.0404, 0.0554, 0.0572, 0.0592, 0.0614, 0.0638, 0.0664, 0.0692};
         for (int i = 0; i < m; i++) {
             int n = sc.nextInt();
 
@@ -19,10 +18,9 @@ class EIAPP21222FQ2 {
             months %= 12;
             double temp = n;
 
-            temp += temp * Math.pow(1+ interestRate[11], year);
+            temp = temp * Math.pow(1 + interestRate[11], year);
 
-            if (months != 0)
-                temp += temp * (interestRate[months - 1] * months / 12);
+            if (months != 0) temp += temp * (interestRate[months - 1] * months / 12);
 
             answer += temp;
         }
